@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyArm 300 Pi – Pick & Place Demonstration</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+        header {
+            background: #1a1a1a;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .video-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        video {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MyArm 300 Pi – Pick & Place Project</h1>
+    <p>A robotics project using ROS2, RViz, Inverse Kinematics & Forward Kinematics</p>
+</header>
+
+<div class="container">
+    <h2>📌 Project Overview</h2>
+    <p>
+        This website presents a full demonstration of my pick-and-place robotics project using the 
+        <strong>Elephant Robotics MyArm 300 Pi</strong>, alongside advanced motion computation through 
+        <strong>Inverse Kinematics (IK)</strong>, <strong>Forward Kinematics (FK)</strong>, and the 
+        <strong>Product of Exponentials</strong> formulation. All motion planning, simulation, and visualization 
+        were implemented in <strong>ROS2</strong> and visualized in <strong>RViz</strong>.
+    </p>
+
+    <p>
+        The video below shows the full process: the robot moves from its home configuration, approaches the cube, 
+        attaches it dynamically, and then transports it into the red container with correct orientation alignment.
+    </p>
+
+    <h2>🎥 Demonstration Video</h2>
+    <p>You can host a large-dimension video here. Replace <code>video.mp4</code> with your own file.</p>
+
+    <div class="video-wrapper">
+        <video controls>
+            <source src="video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <h2>🧠 What This Project Does</h2>
+    <p>
+        ✔ Computes robotic motion using the full PoE (Product of Exponentials) model.<br>
+        ✔ Solves IK with a numerical Newton–Raphson method and joint-limit checking.<br>
+        ✔ Animates the robot smoothly with joint-space interpolation.<br>
+        ✔ Simulates a realistic pick-and-place behaviour in RViz with markers.<br>
+        ✔ Dynamically attaches the cube to the tool based on the robot's end-effector pose.<br>
+        ✔ Models the container and hollow hole using layered RViz markers.
+    </p>
+
+    <h2>ℹ Short Explanation</h2>
+    <p>
+        The goal of the project is to compute the exact arm configuration (joint angles) required for the robot to grasp 
+        and place a cube inside a defined container. Using space-frame screw axes and the PoE formula, the full kinematic 
+        chain is modeled mathematically. Through iterative Newton–Raphson IK, the system converges to valid solutions that 
+        satisfy both orientation and position constraints. All movements and object interactions are animated in ROS2 
+        to simulate a realistic robotic workflow.
+    </p>
+</div>
+
+<footer>
+    MyArm 300 Pi — Robotics Project — ROS2 Simulation
+</footer>
+
+</body>
+</html>
